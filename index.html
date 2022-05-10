@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire de contact</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./php/script.php" />
+    <script
+      src="https://kit.fontawesome.com/c4254e24a8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/64d094d9ba.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--  font oswald -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!--  for use it    =  font-family: 'Oswald', sans-serif; -->
+  </head>
+  <body>
+    <main>
+      <h1>Contact us</h1>
+      <div id="p">
+        <p>Veuillez remplir ce formulaire pour nous contacter</p>
+      </div>
+      <form id="formulaire" methode="POST">
+        <!-- <i class="fas fa-paper-plane"></i>
+        <i class="fa-solid fa-circle-check">Valide !</i> -->
+
+        <label for="contact-Name"> Nom :</label>
+        <input
+          type="text"
+          id="contact-Name"
+          name="Name"
+          placeholder="entrez votre nom ici :"
+        />
+        <span id="error-Name"></span>
+        <label for="contact-firstName">Prénom :</label>
+        <input
+          type="text"
+          id="contact-firstName"
+          name="firstname"
+          placeholder="entrez votre Prénom ici :"
+        />
+        <span id="error-FirstName"></span>
+        <label for="phone">Téléphone :</label>
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="entrez votre téléphone ici :"
+          maxlength="12"
+        />
+        <span id="errorPhoneNumber"></span>
+        <label for="contact-mail">Adresse mail :</label>
+        <input
+          type="text"
+          id="mail"
+          name="contact-mail"
+          placeholder=" entrez votre Email :"
+        />
+        <span id="errorMail"></span>
+        <div id="textright">
+          <label for="texte">Entrez votre message : </label>
+          <textarea
+            name="texte"
+            id="text"
+            cols="40"
+            rows="24"
+            placeholder="Entrez votre message ici "
+          ></textarea>
+          <span id="errorText"></span>
+        </div>
+      </form>
+      <div id="sub">
+        <button id="submit">Envoyer</button>
+        <br />
+        <div class="spansub">
+          <span id="errorSubmit"></span>
+        </div>
+      </div>
+    </main>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
